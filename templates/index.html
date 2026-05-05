@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Smart Study Assistant</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<h1>Smart Study Assistant</h1>
+<form method="POST" action="/predict">
+<input type="number" name="study_hours" placeholder="Study Hours" required>
+<input type="number" name="completion_rate" placeholder="Completion %" required>
+<input type="number" name="score" placeholder="Score" required>
+<button type="submit">Predict</button>
+</form>
+{% if result %}
+<div style="margin-top:20px; font-size:20px; font-weight:bold;">
+    Prediction: {{ result }}
+</div>
+
+<div style="margin-top:10px; font-size:18px;">
+    Model Accuracy: {{ accuracy }}%
+</div>
+{% endif %}
+</body>
+</html>
