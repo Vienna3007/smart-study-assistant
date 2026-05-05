@@ -74,7 +74,7 @@ The project can be deployed on platforms like:
 
 * Render
 * Railway
-
+* Live Link : https://smart-study-assistant-mxvw.onrender.com
 ---
 
 ## 📊 Dataset
